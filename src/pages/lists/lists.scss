@@ -1,0 +1,106 @@
+.lists {
+  display: flex;
+  flex-direction: column;
+  .lists_Container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 0 0;
+    min-height: calc(100vh - 120px);
+
+    .lists_wrapper {
+      width: 100%;
+      max-width: 1024px;
+      display: flex;
+      flex-direction: column;
+
+      .lists_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h2 {
+            font-size: 26px;
+            font-weight: 600;
+          }
+          .filter {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            span {
+              background-color: lightseagreen;
+              color: white;
+              padding: 5px 2px;
+              cursor: pointer;
+              font-size: 14px;
+              border-radius: 5px;
+
+              &:hover {
+                box-shadow: 2px 2px 6px black;
+              }
+            }
+          }
+        }
+        .right {
+          button {
+            background-color: lightseagreen;
+            color: white;
+            padding: 10px 5px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+              box-shadow: 2px 2px 6px black;
+            }
+          }
+        }
+      }
+      .lists_filter {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        span {
+          padding: 5px;
+          background-color: lightgrey;
+          cursor: pointer;
+          border: 2px solid rgb(255, 255, 255);
+
+          &.active {
+            border: 2px solid gray;
+          }
+
+          &.clear {
+            background-color: white;
+            color: blue;
+            text-decoration: underline;
+            &:hover {
+              background-color: white;
+            }
+          }
+
+          &:hover {
+            background-color: rgb(179, 179, 179);
+          }
+        }
+      }
+      .lists_item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin: 20px 0;
+        width: 100%;
+      }
+    }
+  }
+}

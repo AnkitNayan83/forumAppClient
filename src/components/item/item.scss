@@ -1,0 +1,47 @@
+.item {
+  border: 1px solid black;
+  padding: 10px 0 10px 30px;
+  width: 25%;
+  height: 200px;
+  cursor: pointer;
+  color: black;
+  &:hover {
+    background-color: rgb(230, 230, 230);
+  }
+
+  .item_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .top {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      color: rgb(48, 48, 255);
+    }
+
+    .vote {
+      font-weight: 800;
+      color: rgb(139, 139, 139);
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      span {
+        background-color: hsl(205, 46%, 92%);
+        color: hsl(205, 47%, 42%);
+        padding: 3px 5px;
+        border-radius: 5px;
+      }
+    }
+    .footer {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+}
