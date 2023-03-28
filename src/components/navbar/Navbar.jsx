@@ -1,14 +1,15 @@
 import { Search } from "@mui/icons-material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.scss";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   const user = false;
   return (
     <div className="navbar">
       <div className="navContainer">
-        <div className="left">Forum App.</div>
+        <div className="left" onClick={() => navigate("/")}>Forum App.</div>
         <div className="middle">
           <input type="text" placeholder="search anything..." />
           <Search className="navIcon" />
