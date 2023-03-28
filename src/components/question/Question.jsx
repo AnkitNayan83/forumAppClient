@@ -6,7 +6,7 @@ function Question() {
     <div className='Question'>
         <Navbar/>
         <div className="QuestTitle">
-            <h1>Ask a public Question</h1>
+            <h1>Ask a public   Question</h1>
             <img src={quest}/>
         </div>
     </div>
