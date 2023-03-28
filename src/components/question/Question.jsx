@@ -8,6 +8,7 @@ function Question() {
       <div className="QuestTitle">
         <h1>Ask a public Question</h1>
         <h2>Sync change</h2>
+        <h2>Sync change II</h2>
         <img src={quest} />
       </div>
     </div>
