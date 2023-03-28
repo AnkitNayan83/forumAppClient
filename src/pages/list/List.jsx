@@ -3,6 +3,7 @@ import "./list.scss";
 import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
+import { Comment } from "../../components/comment/Comment";
 
 export const List = () => {
   return (
@@ -17,6 +18,8 @@ export const List = () => {
           <div className="list_time">
             <span>created by User Name</span>
             <span>created At 27/03/2023</span>
+            <span className="edit">Edit</span>
+            <span className="delete">Delete</span>
           </div>
           <div className="list_desc">
             <div className="list_vote">
@@ -47,9 +50,31 @@ export const List = () => {
             <span>Tag 2</span>
             <span>Tag 3</span>
           </div>
+          <div className="list_answers">
+            <h2>Answers</h2>
+            <Comment />
+            <Comment />
+            <Comment />
+            <Comment />
+          </div>
+          <div className="list_postAnswer">
+            <div className="post_container">
+              <h2>Your Answer</h2>
+              <form>
+                <textarea
+                  name="answer"
+                  id="answer"
+                  cols="30"
+                  rows="10"
+                  placeholder="State your opinion"
+                ></textarea>
+                <button>Post Answer</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
