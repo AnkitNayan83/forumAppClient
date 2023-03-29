@@ -1,18 +1,13 @@
 import React from "react";
 import { Navbar } from "../navbar/Navbar";
 import { quest } from "../../../public/assests/quest.png";
-function Question() {
+
+import React from "react";
+
+export const Question = () => {
   return (
-    <div className="Question">
-      <Navbar />
-      <div className="QuestTitle">
-        <h1>Ask a public Question</h1>
-        <h2>Sync change</h2>
-        <h2>Sync change II</h2>
-        <img src={quest} />
-      </div>
+    <div className="question">
+      <h1>Ask Something</h1>
     </div>
   );
-}
-
-export default Question;
+};
