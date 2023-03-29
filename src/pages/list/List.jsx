@@ -13,7 +13,7 @@ export const List = () => {
         <div className="list_wrapper">
           <div className="title">
             <h2>This is a change testing of a post page 123 456 xyz ...</h2>
-            <button>Ask something</button>
+            <button onClick={()=> navigate('/ask')}>Ask a question</button>
           </div>
           <div className="list_time">
             <span>created by User Name</span>
