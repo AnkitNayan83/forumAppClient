@@ -8,6 +8,7 @@ import { List } from "./pages/list/List";
 import Question from "./pages/question/Question";
 import { SearchBy } from "./pages/searchBy/SearchBy";
 import { User } from "./pages/user/User";
+import { EditUser } from "./pages/editUser/EditUser";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/search" element={<SearchBy />} />
           <Route path="/ask" element={<Question />} />
           <Route path="/user/:id" element={<User />} />
+          <Route path="/user/:id/edit" element={<EditUser />} />
         </Routes>
       </BrowserRouter>
     </div>
