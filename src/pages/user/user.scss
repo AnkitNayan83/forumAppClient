@@ -1,0 +1,95 @@
+.User {
+    .user-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  
+      .user-wrapper {
+        width: 100%;
+        max-width: 1024px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+            .personal-info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 89%;
+               .left-part{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 20px;
+                .img-container{
+                    width: 120px;
+                    height: 120px;
+                    
+                    img{
+                        width:100%;
+                    }
+                }
+
+                .info-container{
+                    margin-left: 20px;
+                    
+                    h2{
+                        
+                        font-size: xx-large;
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+                    .icon{
+                        margin-right:5px ;
+                     }
+                    p{
+                        color: grey;
+                        font-size:medium;
+                        font-weight: 400;
+                    }
+                }
+            }
+                .right-part{
+                    border: .5px solid rgb(165, 162, 162);
+                    align-self: flex-start;
+                    background-color: white;
+                    border-radius: 4px;
+                    .info{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4px;
+                      
+                    }
+                    .pen{
+                      text-align: center;
+                    }
+                    .btn-profil{
+                        padding: 10px;
+                        cursor: pointer;
+                        border: 1px solid rgb(152, 145, 145);
+                        color: rgb(110, 105, 105);
+                        border-radius: 4px;
+                        &:hover{
+                            background-color: rgb(222, 228, 225);
+                        }
+                        
+                    }
+                }
+            }
+            
+            .item-container{
+                display: flex;
+                text-align: center;
+                align-items: center;
+                // flex-direction: column;
+                width: 100%;
+                gap: 20px;
+                padding: 10px;
+                flex-wrap: wrap;
+            }
+
+        }
+    }
+}

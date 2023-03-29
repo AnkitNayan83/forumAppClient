@@ -4,8 +4,10 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 import { Comment } from "../../components/comment/Comment";
+import { useNavigate } from "react-router-dom";
 
 export const List = () => {
+  const navigate = useNavigate();
   return (
     <div className="list">
       <Navbar />
@@ -13,7 +15,7 @@ export const List = () => {
         <div className="list_wrapper">
           <div className="title">
             <h2>This is a change testing of a post page 123 456 xyz ...</h2>
-            <button>Ask something</button>
+            <button onClick={()=> navigate('/ask')}>Ask a question</button>
           </div>
           <div className="list_time">
             <span>created by User Name</span>

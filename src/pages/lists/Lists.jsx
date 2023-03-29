@@ -31,7 +31,7 @@ export const Lists = () => {
               </div>
             </div>
             <div className="right">
-              <button>Ask a question</button>
+              <button onClick={()=> navigate('/ask')}>Ask a question</button>
             </div>
           </div>
           <div className="lists_filter">
