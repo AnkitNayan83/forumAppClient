@@ -4,7 +4,9 @@ import { Navbar } from '../../components/navbar/Navbar'
 import {SlCalender} from 'react-icons/sl'
 import {FaPen} from 'react-icons/fa'
 import './user.scss'
+import { useNavigate } from 'react-router-dom'
 export const User = () => {
+    const navigate = useNavigate();
   return (
     <div className='User'>
         <Navbar/>
@@ -22,7 +24,7 @@ export const User = () => {
                     </div>
                     <div className="right-part">
                         <div className="update-profile">
-                            <button className='btn-profil'> <div className="info"><FaPen className='pen'/> <p>Edit Profile</p></div> </button>
+                            <button className='btn-profil' onClick={()=>navigate('/user/:id/edit')}> <div className="info"><FaPen className='pen'/> <p>Edit Profile</p></div> </button>
                         </div>
                     </div>
                 </div>
