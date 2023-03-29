@@ -4,8 +4,10 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 import { Comment } from "../../components/comment/Comment";
+import { useNavigate } from "react-router-dom";
 
 export const List = () => {
+  const navigate = useNavigate();
   return (
     <div className="list">
       <Navbar />
