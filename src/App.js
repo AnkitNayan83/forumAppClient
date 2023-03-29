@@ -11,17 +11,17 @@ import { User } from "./pages/user/User";
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/lists' element={<Lists />} />
-          <Route path='/lists/:id' element={<List />} />
-          <Route path='/search' element={<SearchBy />} />
-          <Route path='/ask' element={<Question />} />
-          <Route path='/user' element={<User />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/lists" element={<Lists />} />
+          <Route path="/lists/:id" element={<List />} />
+          <Route path="/search" element={<SearchBy />} />
+          <Route path="/ask" element={<Question />} />
+          <Route path="/user/:id" element={<User />} />
         </Routes>
       </BrowserRouter>
     </div>
