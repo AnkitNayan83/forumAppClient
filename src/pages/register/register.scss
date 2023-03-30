@@ -1,62 +1,62 @@
 .register {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M105.99 315.53a7.17 7.17 0 1 0 13.66 4.36z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M975.81 401.62a48.98 48.98 0 1 0 84.42-49.69z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1224.39 475.39 a49.55 49.55 0 1 0 99.1 0 a49.55 49.55 0 1 0 -99.1 0z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1041.36 278.68 a50.58 50.58 0 1 0 101.16 0 a50.58 50.58 0 1 0 -101.16 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M485.69 344.41L508.42 344.41L508.42 367.14L485.69 367.14z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1241.15 220.65L1272.5 220.65L1272.5 255.82L1241.15 255.82z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1287.4 378.04L1314.25 378.04L1314.25 393.82L1287.4 393.82z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1289.16 541.51L1294.06 541.51L1294.06 581.23L1289.16 581.23z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M882.02 67.4L919.62 67.4L919.62 105L882.02 105z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1343.36 122.67L1352.19 122.67L1352.19 131.5L1343.36 131.5z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M333.09 93.11 a33.39 33.39 0 1 0 66.78 0 a33.39 33.39 0 1 0 -66.78 0z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M657.99 350.14a32.66 32.66 0 1 0 23.83 60.82z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1375.08 37.68L1403.66 37.68L1403.66 66.26L1375.08 66.26z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1355.13 363.32L1366.8 363.32L1366.8 374.99L1355.13 374.99z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M82.48 17.11L87.09 17.11L87.09 21.72L82.48 21.72z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M501.39 73.15 a5.24 5.24 0 1 0 10.48 0 a5.24 5.24 0 1 0 -10.48 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1066.54 435.59L1089.71 435.59L1089.71 485.19L1066.54 485.19z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M669.78 259.77L711.42 259.77L711.42 301.41L669.78 301.41z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M873.96 395.57L916.43 395.57L916.43 401.45L873.96 401.45z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1301.91 488.82a34.26 34.26 0 1 0-49.37 47.5z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M-24.73 197.02 a45.74 45.74 0 1 0 91.48 0 a45.74 45.74 0 1 0 -91.48 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M811.75 301.88a28.85 28.85 0 1 0-51.3-26.41z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M700.76 260.56L707.86 260.56L707.86 307.16L700.76 307.16z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M984.15 381.23a7.82 7.82 0 1 0-14.78-5.12z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M1039.4 243.82L1082.02 243.82L1082.02 286.44L1039.4 286.44z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1356.61 199.33L1386.6 199.33L1386.6 231.64L1356.61 231.64z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1207.3 128.45a43.48 43.48 0 1 0-1.77 86.95z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M966.2 138.56L985.45 138.56L985.45 181.09L966.2 181.09z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1231.36 355.34L1255.33 355.34L1255.33 379.31L1231.36 379.31z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M239.09 473.89a44.02 44.02 0 1 0-36.73-80.01z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1163.48 288.62L1214.44 288.62L1214.44 329.12L1163.48 329.12z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M423.88 400.15L446.94 400.15L446.94 423.21L423.88 423.21z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M915.99 247.31L950.47 247.31L950.47 253.65L915.99 253.65z' stroke='%23037b0b'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M105.99 315.53a7.17 7.17 0 1 0 13.66 4.36z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M975.81 401.62a48.98 48.98 0 1 0 84.42-49.69z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1224.39 475.39 a49.55 49.55 0 1 0 99.1 0 a49.55 49.55 0 1 0 -99.1 0z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1041.36 278.68 a50.58 50.58 0 1 0 101.16 0 a50.58 50.58 0 1 0 -101.16 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M485.69 344.41L508.42 344.41L508.42 367.14L485.69 367.14z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1241.15 220.65L1272.5 220.65L1272.5 255.82L1241.15 255.82z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1287.4 378.04L1314.25 378.04L1314.25 393.82L1287.4 393.82z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1289.16 541.51L1294.06 541.51L1294.06 581.23L1289.16 581.23z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M882.02 67.4L919.62 67.4L919.62 105L882.02 105z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1343.36 122.67L1352.19 122.67L1352.19 131.5L1343.36 131.5z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M333.09 93.11 a33.39 33.39 0 1 0 66.78 0 a33.39 33.39 0 1 0 -66.78 0z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M657.99 350.14a32.66 32.66 0 1 0 23.83 60.82z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1375.08 37.68L1403.66 37.68L1403.66 66.26L1375.08 66.26z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1355.13 363.32L1366.8 363.32L1366.8 374.99L1355.13 374.99z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M82.48 17.11L87.09 17.11L87.09 21.72L82.48 21.72z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M501.39 73.15 a5.24 5.24 0 1 0 10.48 0 a5.24 5.24 0 1 0 -10.48 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1066.54 435.59L1089.71 435.59L1089.71 485.19L1066.54 485.19z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M669.78 259.77L711.42 259.77L711.42 301.41L669.78 301.41z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M873.96 395.57L916.43 395.57L916.43 401.45L873.96 401.45z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1301.91 488.82a34.26 34.26 0 1 0-49.37 47.5z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M-24.73 197.02 a45.74 45.74 0 1 0 91.48 0 a45.74 45.74 0 1 0 -91.48 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M811.75 301.88a28.85 28.85 0 1 0-51.3-26.41z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M700.76 260.56L707.86 260.56L707.86 307.16L700.76 307.16z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M984.15 381.23a7.82 7.82 0 1 0-14.78-5.12z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M1039.4 243.82L1082.02 243.82L1082.02 286.44L1039.4 286.44z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1356.61 199.33L1386.6 199.33L1386.6 231.64L1356.61 231.64z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1207.3 128.45a43.48 43.48 0 1 0-1.77 86.95z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M966.2 138.56L985.45 138.56L985.45 181.09L966.2 181.09z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1231.36 355.34L1255.33 355.34L1255.33 379.31L1231.36 379.31z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M239.09 473.89a44.02 44.02 0 1 0-36.73-80.01z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1163.48 288.62L1214.44 288.62L1214.44 329.12L1163.48 329.12z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M423.88 400.15L446.94 400.15L446.94 423.21L423.88 423.21z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M915.99 247.31L950.47 247.31L950.47 253.65L915.99 253.65z' stroke='%23037b0b'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 
-  .register_card {
-    width: 25%;
-    height: 60%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-
-    .top {
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #118882;
-    }
-
-    form {
+   .register_card {
+      width: 25%;
+      height: 60%;
+      background-color: rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 20px;
+      justify-content: space-around;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px black;
 
-      input {
-        width: 70%;
-        height: 33px;
-        border: none;
-        border-bottom: 1px solid black;
-        outline: none;
-        font-size: 16px;
+      .top {
+         font-size: 20px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: #118882;
       }
 
-      button {
-        padding: 10px 22px;
-        border: none;
-        border-radius: 10px;
-        font-weight: bold;
-        background-color: lightgrey;
+      form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
 
-        &:hover {
-          background-color: #20b2aa;
-          box-shadow: 0 0 5px black;
-        }
+         input {
+            width: 70%;
+            height: 33px;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            font-size: 16px;
+         }
+
+         button {
+            padding: 10px 22px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: lightgrey;
+
+            &:hover {
+               background-color: #20b2aa;
+               box-shadow: 0 0 5px black;
+            }
+         }
       }
-    }
 
-    .register_bottom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgb(109, 109, 109);
-    }
-  }
+      .register_bottom {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: rgb(109, 109, 109);
+      }
+   }
 }

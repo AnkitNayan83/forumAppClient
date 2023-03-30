@@ -11,23 +11,23 @@ import { User } from "./pages/user/User";
 import { EditUser } from "./pages/editUser/EditUser";
 
 function App() {
-  return (
-    <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/lists" element={<Lists />} />
-          <Route path="/lists/:id" element={<List />} />
-          <Route path="/search" element={<SearchBy />} />
-          <Route path="/ask" element={<Question />} />
-          <Route path="/user/:id" element={<User />} />
-          <Route path="/user/:id/edit" element={<EditUser />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+   return (
+      <div className="app">
+         <BrowserRouter>
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/login" element={<Login />} />
+               <Route path="/register" element={<Register />} />
+               <Route path="/lists" element={<Lists />} />
+               <Route path="/lists/:id" element={<List />} />
+               <Route path="/search" element={<SearchBy />} />
+               <Route path="/ask" element={<Question />} />
+               <Route path="/user/:id" element={<User />} />
+               <Route path="/user/edit/:id" element={<EditUser />} />
+            </Routes>
+         </BrowserRouter>
+      </div>
+   );
 }
 
 export default App;

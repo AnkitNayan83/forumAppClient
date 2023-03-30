@@ -1,57 +1,57 @@
 .comment {
-  margin-bottom: 30px;
-  background-color: rgb(243, 243, 243);
-  border-radius: 10px;
-  padding: 15px 7px;
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-
-    .comment_user {
+   margin-bottom: 30px;
+   background-color: rgb(243, 243, 243);
+   border-radius: 10px;
+   padding: 15px 7px;
+   .container {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
       gap: 10px;
 
-      .user {
-        font-weight: bold;
+      .comment_user {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+
+         .user {
+            font-weight: bold;
+         }
+         .date {
+            color: rgb(155, 155, 155);
+         }
       }
-      .date {
-        color: rgb(155, 155, 155);
-      }
-    }
-    .comment_content {
-      display: flex;
-      justify-content: flex-start;
-      gap: 20px;
-      .comment_vote {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .vote_icon {
-          background-color: rgb(223, 223, 223);
-          font-size: 15px;
-          &.up {
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            &:hover {
-              background-color: green;
+      .comment_content {
+         display: flex;
+         justify-content: flex-start;
+         gap: 20px;
+         .comment_vote {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .vote_icon {
+               background-color: rgb(223, 223, 223);
+               font-size: 15px;
+               &.up {
+                  border-top-right-radius: 10px;
+                  border-top-left-radius: 10px;
+                  &:hover {
+                     background-color: green;
+                  }
+               }
+               &.down {
+                  border-bottom-right-radius: 10px;
+                  border-bottom-left-radius: 10px;
+                  &:hover {
+                     background-color: red;
+                  }
+               }
             }
-          }
-          &.down {
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px;
-            &:hover {
-              background-color: red;
-            }
-          }
-        }
+         }
+         p {
+            font-size: 15px;
+         }
       }
-      p {
-        font-size: 15px;
-      }
-    }
-  }
+   }
 }

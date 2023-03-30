@@ -1,69 +1,69 @@
 .navbar {
-  height: 60px;
-  padding: 0 0 0 25px;
-  background-color: rgba(241, 236, 236, 0.63);
+   height: 60px;
+   padding: 0 0 0 25px;
+   background-color: rgba(241, 236, 236, 0.63);
 
-  .navContainer {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .middle {
-      display: flex;
-      align-items: center;
+   .navContainer {
       height: 100%;
-      flex: 2;
-
-      input {
-        height: 60%;
-        width: 80%;
-        border: none;
-        background-color: rgb(233, 233, 233);
-        border-radius: 10px;
-      }
-
-      .navIcon {
-        font-size: 30px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: lightseagreen;
-        cursor: pointer;
-      }
-    }
-    .left {
-      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      font-size: 25px;
-      cursor: pointer;
-    }
-    .right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-between;
 
-      .profile {
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
-        object-fit: cover;
-        cursor: pointer;
-      }
+      .middle {
+         display: flex;
+         align-items: center;
+         height: 100%;
+         flex: 2;
 
-      button {
-        padding: 5px 10px;
-        border: none;
-        background-color: lightseagreen;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
+         input {
+            height: 60%;
+            width: 80%;
+            border: none;
+            background-color: rgb(233, 233, 233);
+            border-radius: 10px;
+         }
+
+         .navIcon {
+            font-size: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: lightseagreen;
+            cursor: pointer;
+         }
       }
-    }
-  }
+      .left {
+         flex: 1;
+         display: flex;
+         align-items: center;
+         justify-content: flex-start;
+         font-size: 25px;
+         cursor: pointer;
+      }
+      .right {
+         flex: 1;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 30px;
+
+         .profile {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+         }
+
+         button {
+            padding: 5px 10px;
+            border: none;
+            background-color: lightseagreen;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+      }
+   }
 }
