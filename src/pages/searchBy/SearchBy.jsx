@@ -1,6 +1,7 @@
 import { ArrowBack, Search } from "@mui/icons-material";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Footer } from "../../components/footer/Footer";
 import { Item } from "../../components/item/Item";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./searchBy.scss";
@@ -36,6 +37,7 @@ export const SearchBy = () => {
                </div>
             </div>
          </div>
+         <Footer/>
       </div>
    );
 };

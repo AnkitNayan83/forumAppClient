@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./Question.scss";
 import TagInput from "../../components/tagInput/TagInput";
+import {Footer} from '../../components/footer/Footer'
 function Question() {
    return (
       <div className="question">
@@ -55,7 +56,7 @@ function Question() {
                      Add up to 5 tags to describe what your question is about.
                      Start typing to see suggestions.
                   </p>
-                  <div className="input-container">
+                  <div className="input-container extra">
                      <TagInput />
                   </div>
                   <button>Next</button>
@@ -66,6 +67,7 @@ function Question() {
                </div>
             </div>
          </div>
+         <Footer />
       </div>
    );
 }

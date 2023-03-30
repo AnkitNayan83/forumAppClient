@@ -1,7 +1,7 @@
 .navbar {
    height: 60px;
    padding: 0 0 0 25px;
-   background-color: rgba(241, 236, 236, 0.63);
+   background-color: rgba(210, 210, 210, 0.894);
 
    .navContainer {
       height: 100%;
@@ -19,12 +19,19 @@
             height: 60%;
             width: 80%;
             border: none;
-            background-color: rgb(233, 233, 233);
+            padding-inline: 8px;
+            background-color: rgb(234, 233, 233);
             border-radius: 10px;
+            &:focus {
+               outline: none !important;
+               border: 1px solid rgb(0, 34, 255);
+               box-shadow: 0 0 10px #719ece;
+            }
          }
 
          .navIcon {
             font-size: 30px;
+            margin-left:4px ;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -57,12 +64,17 @@
          }
 
          button {
-            padding: 5px 10px;
+            padding: 8px 12px;
             border: none;
             background-color: lightseagreen;
             color: white;
             border-radius: 5px;
             cursor: pointer;
+
+            &:hover {
+               background-color: rgb(39, 156, 150);
+               box-shadow: 2px 2px 6px rgb(164, 164, 164);
+            }
          }
       }
    }

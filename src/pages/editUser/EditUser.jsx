@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/footer/Footer";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./editUser.scss";
 
@@ -47,7 +48,12 @@ export const EditUser = () => {
                   </button>
                </div>
             </div>
+           
          </div>
+         <div className="foot">
+         <Footer />
+         </div>
+         
       </div>
    );
 };

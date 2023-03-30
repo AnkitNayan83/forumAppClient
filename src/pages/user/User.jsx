@@ -5,6 +5,7 @@ import { SlCalender } from "react-icons/sl";
 import { FaPen } from "react-icons/fa";
 import "./user.scss";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../../components/footer/Footer";
 export const User = () => {
    const navigate = useNavigate();
    return (
@@ -48,6 +49,7 @@ export const User = () => {
                </div>
             </div>
          </div>
+         <Footer/>
       </div>
    );
 };

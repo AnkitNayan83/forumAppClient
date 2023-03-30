@@ -1,6 +1,7 @@
 .lists {
    display: flex;
    flex-direction: column;
+   background-color: rgb(244, 244, 244);
    .lists_Container {
       width: 100%;
       display: flex;
@@ -16,16 +17,17 @@
 
          .lists_header {
             display: flex;
-            align-items: center;
+            // align-items: center;
             justify-content: space-between;
-
+            align-items: flex-start;
             .left {
                display: flex;
                flex-direction: column;
                gap: 10px;
 
                h2 {
-                  font-size: 26px;
+                  // padding: 10px;
+                  font-size: 30px;
                   font-weight: 600;
                }
                .filter {
@@ -36,28 +38,35 @@
                   span {
                      background-color: lightseagreen;
                      color: white;
-                     padding: 5px 2px;
+                     padding: 5px 3px;
                      cursor: pointer;
                      font-size: 14px;
-                     border-radius: 5px;
+                     border-radius: 3px;  
+                     transition: 0.2s;
 
                      &:hover {
-                        box-shadow: 2px 2px 6px black;
+                        background-color: rgb(39, 156, 150);
+                        box-shadow: 2px 2px 6px rgb(164, 164, 164);
                      }
                   }
                }
             }
             .right {
+             
                button {
+                  margin-right: 80px;
+                  margin-top: 10px;
                   background-color: lightseagreen;
                   color: white;
-                  padding: 10px 5px;
-                  border-radius: 10px;
+                  padding: 10px 8px;
+                  border-radius: 12px;
                   border: none;
                   cursor: pointer;
-
+                  transition: 0.2s;
                   &:hover {
-                     box-shadow: 2px 2px 6px black;
+                     background-color: rgb(39, 156, 150);
+                        box-shadow: 2px 2px 6px rgb(115, 115, 115);
+                     // box-shadow: 3px 3px 8px black;
                   }
                }
             }
@@ -70,20 +79,20 @@
 
             span {
                padding: 5px;
-               background-color: lightgrey;
+               background-color:rgba(224, 224, 224, 0.894);
                cursor: pointer;
-               border: 2px solid rgb(255, 255, 255);
-
+               border: 2px solid rgba(224, 224, 224, 0.894);
+               border-radius: 2px;
                &.active {
-                  border: 2px solid gray;
+                  border: 2px solid rgb(153, 152, 152);
                }
 
                &.clear {
                   background-color: white;
-                  color: blue;
-                  text-decoration: underline;
+                  color: rgb(67, 67, 249);
+                  border: 1px solid  rgb(189, 188, 188);
                   &:hover {
-                     background-color: white;
+                     background-color: rgb(244, 244, 244);
                   }
                }
 
@@ -97,7 +106,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: flex-start;
-            gap: 50px;
+            gap: 40px;
             margin: 20px 0;
             width: 100%;
          }
