@@ -10,7 +10,7 @@ export const Navbar = () => {
       <div className="navbar">
          <div className="navContainer">
             <div className="left" onClick={() => navigate("/")}>
-               Forum App.
+               Forum App !!
             </div>
             <div className="middle">
                <input type="text" placeholder="search anything..." />

@@ -16,7 +16,7 @@ export const Item = () => {
                <span>Tag 2</span>
                <span>Tag 3</span>
             </div>
-            <div className="footer">created by: USER</div>
+            <div className="footer">created by: <u>USER</u></div>
          </div>
       </div>
    );
