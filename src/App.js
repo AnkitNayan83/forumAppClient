@@ -23,7 +23,7 @@ function App() {
                <Route path="/search" element={<SearchBy />} />
                <Route path="/ask" element={<Question />} />
                <Route path="/user/:id" element={<User />} />
-               <Route path="/user/edit/:id" element={<EditUser />} />
+               <Route path="/useredit/:id" element={<EditUser />} />
             </Routes>
          </BrowserRouter>
       </div>

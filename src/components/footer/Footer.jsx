@@ -10,7 +10,7 @@ export const Footer = () => {
                   <li className="fListItem">Forum App</li>
                   <li className="fListItem">
                      <div className="img-container">
-                     <img src="/assests/chat.png" alt="" />
+                        <img src="/assests/chat.png" alt="" />
                      </div>
                   </li>
                </ul>
@@ -19,6 +19,7 @@ export const Footer = () => {
                   <li className="fListItem">Help</li>
                   <li className="fListItem">Teams </li>
                   <li className="fListItem">Answers</li>
+                  <li className="fListItem">Data</li>
                </ul>
                <ul className="fList">
                   <li className="fListItem">About </li>
@@ -33,7 +34,6 @@ export const Footer = () => {
                   <li className="fListItem">Science</li>
                   <li className="fListItem">Business</li>
                   <li className="fListItem">Api</li>
-                  <li className="fListItem">Data</li>
                </ul>
             </div>
             <div className="fText">Copyright © 2023</div>

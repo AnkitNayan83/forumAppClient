@@ -49,7 +49,7 @@ export const User = () => {
                </div>
             </div>
          </div>
-         <Footer/>
+         <Footer />
       </div>
    );
 };
