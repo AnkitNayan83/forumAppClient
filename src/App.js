@@ -21,7 +21,7 @@ function App() {
                <Route path="/lists" element={<Lists />} />
                <Route path="/lists/:id" element={<List />} />
                <Route path="/search" element={<SearchBy />} />
-               <Route path="/ask" element={<Question />} />
+               <Route path="/post" element={<Question />} />
                <Route path="/user/:id" element={<User />} />
                <Route path="/useredit/:id" element={<EditUser />} />
             </Routes>

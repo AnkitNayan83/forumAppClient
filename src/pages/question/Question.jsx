@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./Question.scss";
 import TagInput from "../../components/tagInput/TagInput";
-import {Footer} from '../../components/footer/Footer'
+import { Footer } from "../../components/footer/Footer";
 function Question() {
    return (
       <div className="question">
@@ -14,7 +14,12 @@ function Question() {
                   <div className="img-container">
                      <img
                         className="question-img"
-                        src="/assests/quest.png"
+                        src="/assests/quest1.png"
+                        alt=""
+                     />
+                     <img
+                        className="question-img img2"
+                        src="/assests/quest2.png"
                         alt=""
                      />
                   </div>
@@ -59,7 +64,6 @@ function Question() {
                   <div className="input-container extra">
                      <TagInput />
                   </div>
-                  <button>Next</button>
                </div>
 
                <div className="btn-div">
