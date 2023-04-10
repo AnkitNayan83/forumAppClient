@@ -30,7 +30,7 @@ export const User = () => {
                      <div className="update-profile">
                         <button
                            className="btn-profil"
-                           onClick={() => navigate("/user/edit/:id")}
+                           onClick={() => navigate("/useredit/123")}
                         >
                            {" "}
                            <div className="info">

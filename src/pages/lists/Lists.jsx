@@ -1,14 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/footer/Footer";
 import { Item } from "../../components/item/Item";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./lists.scss";
+import { publicRequest } from "../../axiosinstance";
 
 export const Lists = () => {
    //on this page we will search by title of post
+   const [posts, setPosts] = useState([]);
    const [active, setActive] = useState("");
    const navigate = useNavigate();
+
+   useEffect(() => {
+      const makeRequest = async () => {
+         try {
+            let res;
+            if (active === "newest")
+               res = await publicRequest.get("/post?new=true");
+            else if (active === "votes")
+               res = await publicRequest.get("/post?vote=true");
+            else if (active === "") res = await publicRequest.get("/post");
+
+            setPosts(res.data);
+         } catch (error) {
+            console.log(error);
+         }
+      };
+      makeRequest();
+   }, [active]);
+
+   console.log(posts);
 
    const handelClick = (type) => {
       navigate("/search", { state: { type } });
@@ -35,7 +57,7 @@ export const Lists = () => {
                      </div>
                   </div>
                   <div className="right">
-                     <button onClick={() => navigate("/ask")}>
+                     <button onClick={() => navigate("/post")}>
                         Ask a question
                      </button>
                   </div>
@@ -58,12 +80,9 @@ export const Lists = () => {
                   </span>
                </div>
                <div className="lists_item">
-                  <Item />
-                  <Item />
-                  <Item />
-                  <Item />
-                  <Item />
-                  <Item />
+                  {posts.map((post, i) => (
+                     <Item key={i} data={post} />
+                  ))}
                </div>
             </div>
          </div>

@@ -27,10 +27,7 @@ function Question() {
 
                <div className="ques-title">
                   <h4>Title</h4>
-                  <p>
-                     Be specific and imagine you’re asking a question to another
-                     person.
-                  </p>
+                  <p>Express your question in few words</p>
                   <div className="input-container">
                      <input className="input" type="text" />
                   </div>
@@ -38,10 +35,10 @@ function Question() {
                </div>
 
                <div className="ques-title">
-                  <h4>What are the details of your problem?</h4>
+                  <h4>Detailed description about your problem</h4>
                   <p>
                      Introduce the problem and expand on what you put in the
-                     title. Minimum 20 characters.
+                     title. Minimum 250 characters.
                   </p>
                   <div className="input-container">
                      <textarea

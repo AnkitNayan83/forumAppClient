@@ -10,7 +10,12 @@ export const Navbar = () => {
       <div className="navbar">
          <div className="navContainer">
             <div className="left" onClick={() => navigate("/")}>
-               Forum App !!
+               <img
+                  style={{ width: "30px", height: "30px", marginRight: "5px" }}
+                  src="/assests/chat.png"
+                  alt=""
+               />
+               Right Path
             </div>
             <div className="middle">
                <input type="text" placeholder="search anything..." />

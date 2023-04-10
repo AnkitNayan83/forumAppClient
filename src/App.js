@@ -9,6 +9,7 @@ import Question from "./pages/question/Question";
 import { SearchBy } from "./pages/searchBy/SearchBy";
 import { User } from "./pages/user/User";
 import { EditUser } from "./pages/editUser/EditUser";
+import { EditPost } from "./pages/editPost/EditPost";
 
 function App() {
    return (
@@ -22,6 +23,7 @@ function App() {
                <Route path="/lists/:id" element={<List />} />
                <Route path="/search" element={<SearchBy />} />
                <Route path="/post" element={<Question />} />
+               <Route path="/postedit/:id" element={<EditPost />} />
                <Route path="/user/:id" element={<User />} />
                <Route path="/useredit/:id" element={<EditUser />} />
             </Routes>
