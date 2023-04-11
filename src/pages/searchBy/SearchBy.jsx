@@ -39,7 +39,6 @@ export const SearchBy = () => {
                   <div className="search_bar">
                      <input
                         type="text"
-                        // onChange={(e) => setTag(e.target.value)}
                         placeholder={`enter any ${type}`}
                         ref={inputRef}
                      />

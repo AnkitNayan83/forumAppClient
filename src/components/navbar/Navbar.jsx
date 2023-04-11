@@ -1,11 +1,16 @@
 import { Search } from "@mui/icons-material";
-import React from "react";
+import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./navbar.scss";
 
 export const Navbar = () => {
    const navigate = useNavigate();
    const user = false;
+   const searchRef = useRef();
+   const handelClick = () => {
+      const title = searchRef.current.value;
+      navigate("/lists", { state: title });
+   };
    return (
       <div className="navbar">
          <div className="navContainer">
@@ -18,8 +23,12 @@ export const Navbar = () => {
                Right Path
             </div>
             <div className="middle">
-               <input type="text" placeholder="search anything..." />
-               <Search className="navIcon" />
+               <input
+                  type="text"
+                  placeholder="search anything..."
+                  ref={searchRef}
+               />
+               <Search className="navIcon" onClick={handelClick} />
             </div>
             <div className="right">
                {user ? (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Footer } from "../../components/footer/Footer";
 import { Item } from "../../components/item/Item";
 import { Navbar } from "../../components/navbar/Navbar";
@@ -11,7 +11,8 @@ export const Lists = () => {
    const [posts, setPosts] = useState([]);
    const [active, setActive] = useState("");
    const navigate = useNavigate();
-
+   const location = useLocation();
+   const title = location.state;
    useEffect(() => {
       const makeRequest = async () => {
          try {
@@ -29,8 +30,6 @@ export const Lists = () => {
       };
       makeRequest();
    }, [active]);
-
-   console.log(posts);
 
    const handelClick = (type) => {
       navigate("/search", { state: { type } });
