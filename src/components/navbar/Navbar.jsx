@@ -2,15 +2,24 @@ import { Search } from "@mui/icons-material";
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./navbar.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from "../../redux/userSlice";
 
 export const Navbar = () => {
    const navigate = useNavigate();
-   const user = false;
+   const dispatch = useDispatch();
+   const user = useSelector((state) => state.user.currentUser);
    const searchRef = useRef();
    const handelClick = () => {
       const title = searchRef.current.value;
+      searchRef.current.value = "";
       navigate("/lists", { state: title });
    };
+
+   const handelSignout = () => {
+      dispatch(logOut());
+   };
+
    return (
       <div className="navbar">
          <div className="navContainer">
@@ -38,7 +47,8 @@ export const Navbar = () => {
                         alt=""
                         className="profile"
                      />
-                     <button>Sign Out</button>
+                     <span>{user.username}</span>
+                     <button onClick={handelSignout}>Sign Out</button>
                   </>
                ) : (
                   <>

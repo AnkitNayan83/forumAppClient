@@ -10,15 +10,20 @@ import { SearchBy } from "./pages/searchBy/SearchBy";
 import { User } from "./pages/user/User";
 import { EditUser } from "./pages/editUser/EditUser";
 import { EditPost } from "./pages/editPost/EditPost";
+import { useSelector } from "react-redux";
 
 function App() {
+   const user = useSelector((state) => state.user.currentUser);
    return (
       <div className="app">
          <BrowserRouter>
             <Routes>
                <Route path="/" element={<Home />} />
-               <Route path="/login" element={<Login />} />
-               <Route path="/register" element={<Register />} />
+               <Route path="/login" element={user ? <Home /> : <Login />} />
+               <Route
+                  path="/register"
+                  element={user ? <Home /> : <Register />}
+               />
                <Route path="/lists" element={<Lists />} />
                <Route path="/lists/:id" element={<List />} />
                <Route path="/search" element={<SearchBy />} />

@@ -17,19 +17,27 @@ export const Lists = () => {
       const makeRequest = async () => {
          try {
             let res;
-            if (active === "newest")
-               res = await publicRequest.get("/post?new=true");
-            else if (active === "votes")
-               res = await publicRequest.get("/post?vote=true");
-            else if (active === "") res = await publicRequest.get("/post");
-
+            if (active === "newest") {
+               res = title
+                  ? await publicRequest.get(`/post?new=true&title=${title}`)
+                  : await publicRequest.get("/post?new=true");
+            } else if (active === "votes")
+               res = title
+                  ? await publicRequest.get(`/post?vote=true&title=${title}`)
+                  : await publicRequest.get("/post?vote=true");
+            else if (active === "")
+               res = title
+                  ? await publicRequest.get(`/post?title=${title}`)
+                  : await publicRequest.get("/post");
             setPosts(res.data);
          } catch (error) {
             console.log(error);
          }
       };
       makeRequest();
-   }, [active]);
+   }, [title, active]);
+
+   console.log(title);
 
    const handelClick = (type) => {
       navigate("/search", { state: { type } });
@@ -42,7 +50,11 @@ export const Lists = () => {
             <div className="lists_wrapper">
                <div className="lists_header">
                   <div className="left">
-                     <h2>Top Questions</h2>
+                     <h2>
+                        {title
+                           ? `Showing result for ${title}`
+                           : "Top Questions"}
+                     </h2>
                      <div className="filter">
                         <span onClick={() => handelClick("tag")}>
                            Search by tags
@@ -78,11 +90,22 @@ export const Lists = () => {
                      clear
                   </span>
                </div>
-               <div className="lists_item">
-                  {posts.map((post, i) => (
-                     <Item key={i} data={post} />
-                  ))}
-               </div>
+               {posts.length === 0 ? (
+                  <span className="notFound">
+                     <img
+                        className="no_result"
+                        src="/assests/no_result.png"
+                        alt=""
+                     />
+                     <p>No result found for "{title}"</p>
+                  </span>
+               ) : (
+                  <div className="lists_item">
+                     {posts.map((post, i) => (
+                        <Item key={i} data={post} />
+                     ))}
+                  </div>
+               )}
             </div>
          </div>
          <Footer />
