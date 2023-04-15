@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./Question.scss";
 import TagInput from "../../components/tagInput/TagInput";
 import { Footer } from "../../components/footer/Footer";
+import { useSelector } from "react-redux";
+import { publicRequest } from "../../axiosinstance";
+import { useNavigate } from "react-router-dom";
 function Question() {
+   const [tags_, setNewTag] = useState([]);
+   const [title, setTitle] = useState("");
+   const [desc, setDesc] = useState("");
+   const user = useSelector((state) => state.user.currentUser);
+
+   const username = user.username;
+   const navigate = useNavigate();
+
+   const handelPost = async () => {
+      try {
+         const data = { title, desc, tags: tags_, username };
+         console.log(data);
+         const res = await publicRequest.post("/post", data, {
+            withCredentials: true,
+         });
+         navigate(`/lists/:${res.data._id}`, { state: { data: res.data } });
+      } catch (error) {
+         console.log(error);
+      }
+   };
+
    return (
       <div className="question">
          <Navbar />
@@ -29,7 +53,11 @@ function Question() {
                   <h4>Title</h4>
                   <p>Express your question in few words</p>
                   <div className="input-container">
-                     <input className="input" type="text" />
+                     <input
+                        onChange={(e) => setTitle(e.target.value)}
+                        className="input"
+                        type="text"
+                     />
                   </div>
                   <button>Next</button>
                </div>
@@ -47,6 +75,7 @@ function Question() {
                         id=""
                         cols="116"
                         rows="10"
+                        onChange={(e) => setDesc(e.target.value)}
                      ></textarea>
                   </div>
                   <button>Next</button>
@@ -59,12 +88,14 @@ function Question() {
                      Start typing to see suggestions.
                   </p>
                   <div className="input-container extra">
-                     <TagInput />
+                     <TagInput tags_={[]} setNewTag={setNewTag} />
                   </div>
                </div>
 
                <div className="btn-div">
-                  <button className="btn-post">Post your Question</button>
+                  <button className="btn-post" onClick={handelPost}>
+                     Post your Question
+                  </button>
                </div>
             </div>
          </div>

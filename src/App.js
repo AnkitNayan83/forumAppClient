@@ -28,7 +28,7 @@ function App() {
                <Route path="/lists/:id" element={<List />} />
                <Route path="/search" element={<SearchBy />} />
                <Route path="/post" element={<Question />} />
-               <Route path="/postedit/:id" element={<EditPost />} />
+               <Route path="/editPost" element={<EditPost />} />
                <Route path="/user/:id" element={<User />} />
                <Route path="/useredit/:id" element={<EditUser />} />
             </Routes>

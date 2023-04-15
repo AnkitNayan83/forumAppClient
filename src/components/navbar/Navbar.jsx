@@ -18,6 +18,7 @@ export const Navbar = () => {
 
    const handelSignout = () => {
       dispatch(logOut());
+      localStorage.removeItem("user");
    };
 
    return (

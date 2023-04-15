@@ -8,10 +8,18 @@ import {
    registerSuccess,
 } from "./userSlice";
 
+const config = {
+   headers: {
+      "Content-Type": "application/json",
+   },
+   withCredentials: true,
+};
+
 export const login = async (dispatch, userDetails) => {
    dispatch(loginStart());
    try {
-      const res = await publicRequest.post("/auth/login", userDetails);
+      const res = await publicRequest.post("/auth/login", userDetails, config);
+      localStorage.setItem("user", JSON.stringify(res.data));
       dispatch(loginSuccess(res.data));
    } catch (error) {
       dispatch(loginFaliure());
@@ -22,6 +30,7 @@ export const register = async (dispatch, userDetails) => {
    dispatch(registerStart());
    try {
       const res = await publicRequest.post("/auth/register", userDetails);
+      localStorage.setItem("user", JSON.stringify(res.data));
       dispatch(registerSuccess(res.data));
    } catch (error) {
       dispatch(registerFaliure());

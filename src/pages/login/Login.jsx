@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./login.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/apiCalls";
-import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
-   const navigate = useNavigate();
    const [username, setUserName] = useState("");
    const [password, setPassword] = useState("");
    const dispatch = useDispatch();
@@ -21,6 +19,8 @@ export const Login = () => {
             <div className="top">
                <h1>Login</h1>
                {error && <span>Wrong username or password</span>}
+               {/*add loading animation*/}
+               {loading && <span>loading please wait...</span>}{" "}
             </div>
             <form>
                <input

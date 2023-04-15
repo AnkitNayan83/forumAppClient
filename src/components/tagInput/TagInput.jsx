@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { useState } from "react";
 import "./TagInput.scss";
-function TagInput() {
-   const [tags, setTags] = useState([]);
+function TagInput({ tags_, setNewTag }) {
+   const [tags, setTags] = useState([...tags_]);
    const [tag, setTag] = useState("");
    const ref = useRef();
 
@@ -12,6 +12,7 @@ function TagInput() {
       if (!value.trim()) return;
 
       setTags([...tags, value]);
+      setNewTag([...tags, value]);
       e.target.value = "";
    }
 
@@ -19,12 +20,14 @@ function TagInput() {
       const value = tag;
       if (!value.trim()) return;
       setTags([...tags, value]);
+      setNewTag([...tags, value]);
       setTag("");
       ref.current.value = "";
    };
 
    function removeTag(index) {
       setTags(tags.filter((el, i) => i !== index));
+      setNewTag(tags.filter((el, i) => i !== index));
    }
 
    return (

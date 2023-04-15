@@ -13,6 +13,7 @@ export const Lists = () => {
    const navigate = useNavigate();
    const location = useLocation();
    const title = location.state;
+
    useEffect(() => {
       const makeRequest = async () => {
          try {
@@ -36,8 +37,6 @@ export const Lists = () => {
       };
       makeRequest();
    }, [title, active]);
-
-   console.log(title);
 
    const handelClick = (type) => {
       navigate("/search", { state: { type } });
