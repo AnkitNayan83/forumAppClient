@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./item.scss";
-import { publicRequest } from "../../axiosinstance";
 
 export const Item = ({ data }) => {
    const navigate = useNavigate();
-   const [userName, setUserName] = useState("");
    const [loadingPost, setLoadingPost] = useState(false);
-   useEffect(() => {
-      const getUser = async () => {
-         setLoadingPost(true);
-         const res = await publicRequest.get(`/users/${data.author}`);
-         setUserName(res.data.username);
-         setLoadingPost(false);
-      };
-      getUser();
-   }, [data.author]);
 
    return (
       <div
@@ -36,7 +25,7 @@ export const Item = ({ data }) => {
                   ))}
                </div>
                <div className="footer">
-                  created by: <u>{userName}</u>
+                  created by: <u>{data.username}</u>
                </div>
             </div>
          )}

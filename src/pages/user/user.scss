@@ -3,7 +3,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      min-height: calc(100vh - 150px);
+      min-height: calc(100vh - 60px);
 
       .user-wrapper {
          width: 100%;
@@ -75,6 +75,11 @@
                   }
                }
             }
+         }
+         .user_post {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
          }
 
          .item-container {

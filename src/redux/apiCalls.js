@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom";
 import { publicRequest } from "../axiosinstance";
 import {
    loginFaliure,
@@ -21,6 +22,7 @@ export const login = async (dispatch, userDetails) => {
       const res = await publicRequest.post("/auth/login", userDetails, config);
       localStorage.setItem("user", JSON.stringify(res.data));
       dispatch(loginSuccess(res.data));
+      redirect("/");
    } catch (error) {
       dispatch(loginFaliure());
    }
@@ -31,7 +33,7 @@ export const register = async (dispatch, userDetails) => {
    try {
       const res = await publicRequest.post("/auth/register", userDetails);
       localStorage.setItem("user", JSON.stringify(res.data));
-      dispatch(registerSuccess(res.data));
+      dispatch(registerSuccess());
    } catch (error) {
       dispatch(registerFaliure());
    }

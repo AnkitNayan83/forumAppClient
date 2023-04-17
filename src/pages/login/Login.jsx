@@ -7,7 +7,7 @@ export const Login = () => {
    const [username, setUserName] = useState("");
    const [password, setPassword] = useState("");
    const dispatch = useDispatch();
-   const { currentUser, loading, error } = useSelector((state) => state.user);
+   const { loading, error } = useSelector((state) => state.user);
    const handelLogin = (e) => {
       e.preventDefault();
       login(dispatch, { username, password });

@@ -25,6 +25,7 @@
       .comment_content {
          display: flex;
          justify-content: flex-start;
+         align-items: center;
          gap: 20px;
          .comment_vote {
             cursor: pointer;
@@ -53,6 +54,15 @@
          }
          p {
             font-size: 20px;
+         }
+      }
+      .comment_delete {
+         padding-left: 20px;
+
+         .del {
+            color: red;
+            text-decoration: underline;
+            cursor: pointer;
          }
       }
    }

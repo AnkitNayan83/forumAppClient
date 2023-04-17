@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./register.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
    const [username, setUserName] = useState("");
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
-
+   const navigate = useNavigate();
    const dispatch = useDispatch();
 
    const { loading, error } = useSelector((state) => state.user);
@@ -15,6 +16,7 @@ export const Register = () => {
    const handelRegister = (e) => {
       e.preventDefault();
       register(dispatch, { username, email, password });
+      navigate("/login");
    };
 
    return (

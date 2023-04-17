@@ -22,7 +22,7 @@ function Question() {
          const res = await publicRequest.post("/post", data, {
             withCredentials: true,
          });
-         navigate(`/lists/:${res.data._id}`, { state: { data: res.data } });
+         navigate(`/lists/${res.data._id}`);
       } catch (error) {
          console.log(error);
       }

@@ -10,6 +10,7 @@ import { SearchBy } from "./pages/searchBy/SearchBy";
 import { User } from "./pages/user/User";
 import { EditUser } from "./pages/editUser/EditUser";
 import { EditPost } from "./pages/editPost/EditPost";
+import Cookies from "js-cookie";
 import { useSelector } from "react-redux";
 
 function App() {
@@ -27,10 +28,19 @@ function App() {
                <Route path="/lists" element={<Lists />} />
                <Route path="/lists/:id" element={<List />} />
                <Route path="/search" element={<SearchBy />} />
-               <Route path="/post" element={<Question />} />
-               <Route path="/editPost" element={<EditPost />} />
-               <Route path="/user/:id" element={<User />} />
-               <Route path="/useredit/:id" element={<EditUser />} />
+               <Route path="/post" element={user ? <Question /> : <Login />} />
+               <Route
+                  path="/editPost"
+                  element={user ? <EditPost /> : <Login />}
+               />
+               <Route
+                  path={`/userprofile/${user.username}`}
+                  element={<User />}
+               />
+               <Route
+                  path="/useredit"
+                  element={user ? <EditUser /> : <Login />}
+               />
             </Routes>
          </BrowserRouter>
       </div>

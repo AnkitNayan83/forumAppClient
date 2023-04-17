@@ -6,8 +6,21 @@ import { FaPen } from "react-icons/fa";
 import "./user.scss";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../../components/footer/Footer";
+import { useState } from "react";
+import { useEffect } from "react";
+import { publicRequest } from "../../axiosinstance";
+import { useSelector } from "react-redux";
 export const User = () => {
+   const currentUser = useSelector((state) => state.user.currentUser);
    const navigate = useNavigate();
+   const [posts, setPosts] = useState([]);
+   useEffect(() => {
+      const getPost = async () => {
+         const res = await publicRequest.get(`/post?user=${currentUser._id}`);
+         setPosts(res.data);
+      };
+      getPost();
+   }, [currentUser, posts]);
    return (
       <div className="User">
          <Navbar />
@@ -30,7 +43,7 @@ export const User = () => {
                      <div className="update-profile">
                         <button
                            className="btn-profil"
-                           onClick={() => navigate("/useredit/123")}
+                           onClick={() => navigate("/useredit")}
                         >
                            {" "}
                            <div className="info">
@@ -40,12 +53,11 @@ export const User = () => {
                      </div>
                   </div>
                </div>
-
+               <span className="user_post">Your Posts</span>
                <div className="item-container">
-                  <Item />
-                  <Item />
-                  <Item />
-                  <Item />
+                  {posts.map((post, i) => (
+                     <Item data={post} key={i} />
+                  ))}
                </div>
             </div>
          </div>

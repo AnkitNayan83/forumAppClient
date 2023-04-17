@@ -1,2 +1,46 @@
-// .home {
-// }
+.home {
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+
+   .sessionExpired {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #313131;
+
+      .wrapper {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-evenly;
+         background-color: white;
+         height: 150px;
+         width: 300px;
+         border-radius: 10px;
+         p {
+            font-size: 16px;
+            font-weight: 600;
+         }
+
+         button {
+            padding: 10px 22px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: lightgrey;
+            cursor: pointer;
+
+            &:hover {
+               background-color: #20b2aa;
+               box-shadow: 0 0 5px black;
+            }
+         }
+      }
+   }
+}
