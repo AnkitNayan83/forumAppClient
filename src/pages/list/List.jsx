@@ -117,7 +117,7 @@ export const List = () => {
    const getDate = (str) => {
       let date = "";
       for (let i = 0; i < str.length; i++) {
-         if (str[i] == "T") break;
+         if (str[i] === "T") break;
          else date += str[i];
       }
       return date;
