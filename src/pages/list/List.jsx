@@ -74,8 +74,8 @@ export const List = () => {
 
    const handelDelete = async () => {
       try {
-         const res = await publicRequest.post(`/post/${data._id}`);
-         console.log(res);
+         const res = await publicRequest.delete(`/post/${data._id}`);
+         console.log(res.data);
          navigate("/lists");
       } catch (error) {
          console.log(error);

@@ -3,14 +3,12 @@
       width: 100%;
       display: flex;
       justify-content: center;
+      min-height: calc(100vh - 110px);
       .edituser-wrapper {
          width: 100%;
          max-width: 1024px;
          margin-top: 30px;
          display: flex;
-         // flex-direction: column;
-         // align-items: flex-start;
-
          form {
             border: 1px solid rgb(181, 180, 180);
             overflow: hidden;
@@ -50,38 +48,47 @@
          .right-part {
             flex: 3;
 
-            input {
-               display: block;
-               padding: 8px 16px;
-               width: 92.5%;
-               margin-top: 16px;
-               border: 1px solid rgb(197, 193, 193);
-               border-radius: 4px;
-               &:focus {
-                  outline: none !important;
-                  border: 1px solid rgb(0, 34, 255);
-                  box-shadow: 0 0 10px #719ece;
-               }
+            h2 {
+               margin: 20px 0;
             }
 
-            .links {
+            form {
                display: flex;
-               margin: 20px;
-               margin-left: 0;
-               gap: 10px;
-            }
+               flex-direction: column;
+               gap: 30px;
+               input {
+                  display: block;
+                  padding: 8px 16px;
+                  width: 92.5%;
+                  margin-top: 16px;
+                  border: 1px solid rgb(197, 193, 193);
+                  border-radius: 4px;
+                  &:focus {
+                     outline: none !important;
+                     border: 1px solid rgb(0, 34, 255);
+                     box-shadow: 0 0 10px #719ece;
+                  }
+               }
 
-            .btn-primary {
-               width: fit-content;
-               background-color: #65befd;
-               font-weight: 300;
-               color: white;
-               cursor: pointer;
-               &:hover {
-                  background-color: #169af8;
+               .links {
+                  display: flex;
+                  margin: 20px;
+                  margin-left: 0;
+                  gap: 10px;
+               }
+
+               .btn-update {
+                  width: 30%;
+                  padding: 7px 0;
+                  background-color: #719ece;
+                  border: none;
+                  cursor: pointer;
+
+                  &:hover {
+                     box-shadow: 5px 5px 10px black;
+                  }
                }
             }
-
             .del-account {
                padding: 12px 18px;
                border-radius: 5px;
@@ -91,13 +98,12 @@
             }
 
             .del-account:hover {
-               background-color: rgb(255, 74, 74);
+               background-color: rgb(255, 60, 60);
             }
          }
       }
-      
    }
 }
-.foot{
-   margin-top :45px;
+.foot {
+   margin-top: 45px;
 }

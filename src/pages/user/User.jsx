@@ -29,10 +29,10 @@ export const User = () => {
                <div className="personal-info">
                   <div className="left-part">
                      <div className="img-container">
-                        <img src="/assests/user.png" alt="profile" />
+                        <img src="/assests/robot.png" alt="profile" />
                      </div>
                      <div className="info-container">
-                        <h2>User Name</h2>
+                        <h2>{currentUser.username}</h2>
                         <p>
                            <SlCalender className="icon" /> Joined at : 23rd
                            March

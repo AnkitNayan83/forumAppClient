@@ -2,8 +2,24 @@ import React from "react";
 import { Footer } from "../../components/footer/Footer";
 import { Navbar } from "../../components/navbar/Navbar";
 import "./editUser.scss";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateUser } from "../../redux/apiCalls";
+import { useNavigate } from "react-router-dom";
 
 export const EditUser = () => {
+   const user = useSelector((state) => state.user.currentUser);
+   const [username, setUsername] = useState(user.username);
+   const [email, setEmail] = useState(user.email);
+   const dispatch = useDispatch();
+   const navigate = useNavigate();
+
+   const handelUpdate = (e) => {
+      e.preventDefault();
+      updateUser(dispatch, { username, email }, user._id);
+      navigate(`/userprofile/editUser`);
+   };
+
    return (
       <div className="EditUser">
          <Navbar />
@@ -12,35 +28,43 @@ export const EditUser = () => {
                <div className="left-part">
                   <div className="input-user-img">
                      <label htmlFor="inputImg" className="labelImg">
-                        <img src="/assests/user.png" alt="name" />
+                        <img src="/assests/robot.png" alt="name" />
                      </label>
-                     <input
+                     {/* <input
                         className="inputImg"
                         id="inputImg"
                         type="file"
                         accept="image/*"
-                     />
+                     /> */}
                   </div>
                </div>
                <div className="right-part">
+                  <h2>Your Details</h2>
                   <form>
-                     <input type="text" placeholder="Your Name" />
-                     <input type="text" placeholder="Location" />
-
-                     <input type="text" placeholder="Title" />
-                     <input type="text" placeholder="About me" />
-
-                     <div className="links">
-                        <h4>Links:</h4>
-                        <input type="text" placeholder="Portfolio Link" />
-                        <input type="text" placeholder="Github Link" />
+                     <div className="i1">
+                        <label htmlFor="username">Username:</label>
+                        <input
+                           id="username"
+                           type="text"
+                           value={username}
+                           placeholder="Your Name"
+                           onChange={(e) => setUsername(e.target.value)}
+                        />
+                     </div>
+                     <div className="i2">
+                        <label htmlFor="email">Email</label>
+                        <input
+                           type="email"
+                           value={email}
+                           id="email"
+                           placeholder="email"
+                           onChange={(e) => setEmail(e.target.value)}
+                        />
                      </div>
 
-                     <input
-                        type="submit"
-                        className="btn-primary"
-                        value="Save Profile"
-                     />
+                     <button onClick={handelUpdate} className="btn-update">
+                        Update Account
+                     </button>
                   </form>
 
                   <button className="del-account btn-primary">
@@ -48,12 +72,10 @@ export const EditUser = () => {
                   </button>
                </div>
             </div>
-           
          </div>
          <div className="foot">
-         <Footer />
+            <Footer />
          </div>
-         
       </div>
    );
 };

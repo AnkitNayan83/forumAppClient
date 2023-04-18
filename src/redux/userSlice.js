@@ -1,3 +1,5 @@
+import { updateUser } from "./apiCalls";
+
 const { createSlice } = require("@reduxjs/toolkit");
 
 const userSlice = createSlice({
@@ -37,6 +39,20 @@ const userSlice = createSlice({
       logOut: (state) => {
          state.currentUser = null;
       },
+      updateUserSuccess: (state, action) => {
+         state.currentUser.username = action.payload.username;
+         state.currentUser.email = action.payload.email;
+         state.loading = false;
+         state.error = false;
+      },
+      updateUserStart: (state) => {
+         state.loading = true;
+         state.error = false;
+      },
+      updateUserFaliure: (state) => {
+         state.error = true;
+         state.loading = false;
+      },
    },
 });
 
@@ -50,6 +66,9 @@ export const {
    registerSuccess,
    registerFaliure,
    logOut,
+   updateUserSuccess,
+   updateUserStart,
+   updateUserFaliure,
 } = userSlice.actions;
 
 // exporting reducer

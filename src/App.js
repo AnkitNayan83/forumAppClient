@@ -34,8 +34,8 @@ function App() {
                   element={user ? <EditPost /> : <Login />}
                />
                <Route
-                  path={`/userprofile/${user.username}`}
-                  element={<User />}
+                  path={`/userprofile/editUser`}
+                  element={user ? <User /> : <Login />}
                />
                <Route
                   path="/useredit"

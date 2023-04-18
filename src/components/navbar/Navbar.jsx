@@ -46,12 +46,10 @@ export const Navbar = () => {
                {user ? (
                   <>
                      <img
-                        src="https://i.ibb.co/tpPJjB3/Whats-App-Image-2022-06-21-at-5-48-06-PM.jpg"
+                        src="/assests/robot.png"
                         alt=""
                         className="profile"
-                        onClick={() =>
-                           navigate(`/userprofile/${user.username}`)
-                        }
+                        onClick={() => navigate(`/userprofile/editUser`)}
                      />
                      <span>{user.username}</span>
                      <button onClick={handelSignout}>Sign Out</button>

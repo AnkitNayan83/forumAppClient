@@ -25,7 +25,8 @@ export const EditPost = () => {
             },
             { withCredentials: true }
          );
-         navigate(`/lists/${data._id}`, { state: { data: res.data } });
+         console.log(res.data);
+         navigate(`/lists/${data._id}`);
       } catch (error) {
          console.log(error);
       }

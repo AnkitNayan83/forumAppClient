@@ -7,6 +7,9 @@ import {
    registerFaliure,
    registerStart,
    registerSuccess,
+   updateUserSuccess,
+   updateUserStart,
+   updateUserFaliure,
 } from "./userSlice";
 
 const config = {
@@ -36,5 +39,18 @@ export const register = async (dispatch, userDetails) => {
       dispatch(registerSuccess());
    } catch (error) {
       dispatch(registerFaliure());
+   }
+};
+
+export const updateUser = async (dispatch, userDetails, id) => {
+   dispatch(updateUserStart());
+   try {
+      const res = await publicRequest.put(`/users/${id}`, userDetails, {
+         withCredentials: true,
+      });
+      localStorage.setItem("user", JSON.stringify(res.data));
+      dispatch(updateUserSuccess());
+   } catch (error) {
+      dispatch(updateUserFaliure());
    }
 };
