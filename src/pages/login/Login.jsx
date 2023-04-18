@@ -19,7 +19,6 @@ export const Login = () => {
             <div className="top">
                <h1>Login</h1>
                {error && <span>Wrong username or password</span>}
-               {/*add loading animation*/}
                {loading && <span>loading please wait...</span>}{" "}
             </div>
             <form>

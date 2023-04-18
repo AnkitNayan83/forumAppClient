@@ -21,6 +21,16 @@ export const User = () => {
       };
       getPost();
    }, [currentUser, posts]);
+
+   const getDate = (str) => {
+      let date = "";
+      for (let i = 0; i < str.length; i++) {
+         if (str[i] == "T") break;
+         else date += str[i];
+      }
+      return date;
+   };
+
    return (
       <div className="User">
          <Navbar />
@@ -34,8 +44,8 @@ export const User = () => {
                      <div className="info-container">
                         <h2>{currentUser.username}</h2>
                         <p>
-                           <SlCalender className="icon" /> Joined at : 23rd
-                           March
+                           <SlCalender className="icon" /> Joined at :{" "}
+                           {getDate(currentUser.createdAt)}
                         </p>
                      </div>
                   </div>

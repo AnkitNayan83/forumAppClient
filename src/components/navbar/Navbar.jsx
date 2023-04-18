@@ -51,7 +51,12 @@ export const Navbar = () => {
                         className="profile"
                         onClick={() => navigate(`/userprofile/editUser`)}
                      />
-                     <span>{user.username}</span>
+                     <span
+                        style={{ cursor: "pointer" }}
+                        onClick={() => navigate(`/userprofile/editUser`)}
+                     >
+                        {user.username}
+                     </span>
                      <button onClick={handelSignout}>Sign Out</button>
                   </>
                ) : (

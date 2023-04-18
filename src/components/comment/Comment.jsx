@@ -66,12 +66,21 @@ export const Comment = ({ data, postId }) => {
       }
    };
 
+   const getDate = (str) => {
+      let date = "";
+      for (let i = 0; i < str.length; i++) {
+         if (str[i] == "T") break;
+         else date += str[i];
+      }
+      return date;
+   };
+
    return (
       <div className="comment">
          <div className="container">
             <div className="comment_user">
                <span className="user">{data.username}</span>
-               <span className="date"> 28/03/23</span>
+               <span className="date"> {getDate(data.createdAt)}</span>
             </div>
             <div className="comment_content">
                <div className="comment_vote">
