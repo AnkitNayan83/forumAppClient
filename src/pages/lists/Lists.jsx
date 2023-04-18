@@ -58,12 +58,6 @@ export const Lists = () => {
                         <span onClick={() => handelClick("tag")}>
                            Search by tags
                         </span>
-                        <span onClick={() => handelClick("user")}>
-                           Search by user
-                        </span>
-                        <span onClick={() => handelClick("company")}>
-                           Search by company
-                        </span>
                      </div>
                   </div>
                   <div className="right">

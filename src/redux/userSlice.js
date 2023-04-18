@@ -1,5 +1,3 @@
-import { updateUser } from "./apiCalls";
-
 const { createSlice } = require("@reduxjs/toolkit");
 
 const userSlice = createSlice({

@@ -1,14 +1,19 @@
+@import "../../app.scss";
 .EditUser {
    .edituser-container {
       width: 100%;
       display: flex;
       justify-content: center;
       min-height: calc(100vh - 110px);
+
       .edituser-wrapper {
          width: 100%;
          max-width: 1024px;
          margin-top: 30px;
          display: flex;
+         @include mobile {
+            flex-direction: column;
+         }
          form {
             border: 1px solid rgb(181, 180, 180);
             overflow: hidden;

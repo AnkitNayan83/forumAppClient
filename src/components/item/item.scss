@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .item {
    border: 1px solid rgb(189, 188, 188);
    padding: 7px 0 10px 30px;
@@ -7,6 +8,9 @@
    color: black;
    background-color: rgba(246, 246, 246, 0.982);
    transition: 0.2s;
+   @include mobile {
+      width: 50%;
+   }
    &:hover {
       background-color: rgba(230, 230, 230, 0.894);
       scale: 1.1;

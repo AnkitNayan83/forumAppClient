@@ -10,7 +10,6 @@ import { SearchBy } from "./pages/searchBy/SearchBy";
 import { User } from "./pages/user/User";
 import { EditUser } from "./pages/editUser/EditUser";
 import { EditPost } from "./pages/editPost/EditPost";
-import Cookies from "js-cookie";
 import { useSelector } from "react-redux";
 
 function App() {
