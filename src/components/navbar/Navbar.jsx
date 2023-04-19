@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./navbar.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../../redux/userSlice";
-import Cookies from "js-cookie";
 
 export const Navbar = () => {
    const navigate = useNavigate();
@@ -20,7 +19,6 @@ export const Navbar = () => {
    const handelSignout = () => {
       dispatch(logOut());
       localStorage.removeItem("user");
-      Cookies.remove("access_token");
    };
 
    return (
