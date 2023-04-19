@@ -116,7 +116,7 @@ export const List = () => {
 
    const getDate = (str) => {
       let date = "";
-      for (let i = 0; i < str.length; i++) {
+      for (let i = 0; i < str?.length; i++) {
          if (str[i] === "T") break;
          else date += str[i];
       }
@@ -136,7 +136,7 @@ export const List = () => {
                </div>
                <div className="list_time">
                   <span>created by {data.username}</span>
-                  <span>created At {getDate(data.createdAt)}</span>
+                  <span>created At {getDate(data?.createdAt)}</span>
                   {checkUser() && (
                      <>
                         <span
