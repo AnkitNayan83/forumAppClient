@@ -32,10 +32,6 @@ export const Home = () => {
                <Header />
             </>
          )}
-         <>
-            <Navbar />
-            <Header />
-         </>
       </div>
    );
 };
