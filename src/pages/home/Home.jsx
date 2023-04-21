@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./home.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../../redux/userSlice";
+import Cookies from "js-cookie";
 
 export const Home = () => {
    const cookieExists = Cookies.get("access_token");
